@@ -19,8 +19,9 @@ limitations under the License.
 package tools
 
 import (
-	_ "knative.dev/test-infra/scripts"
+	_ "knative.dev/hack"
 
 	// For istio installation
+	_ "knative.dev/net-istio/third_party"
 	_ "knative.dev/net-istio/third_party/istio-stable"
 )

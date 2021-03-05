@@ -5,7 +5,7 @@ weight: 31
 type: "docs"
 ---
 
-![version](https://img.shields.io/badge/API_Version-v1beta1-red?style=flat-square)
+![version](https://img.shields.io/badge/API_Version-v1-red?style=flat-square)
 
 ContainerSource will start a container image which will generate events under
 certain situations and send messages to a sink URI. It also can be an easy way
@@ -30,7 +30,7 @@ This example shows how the heartbeats container sends events to the Event Displa
 
 ### Preparing the heartbeats image
 Knative [event-sources](https://github.com/knative/eventing-contrib) has a
-sample of heartbeats event source. You could clone the source codes by
+sample of heartbeats event source. You could clone the source code by
 
 ```
 git clone -b "{{< branch >}}" https://github.com/knative/eventing-contrib.git
@@ -102,7 +102,7 @@ to the container.
 
 ```shell
 kubectl -n containersource-example apply -f - << EOF
-apiVersion: sources.knative.dev/v1beta1
+apiVersion: sources.knative.dev/v1
 kind: ContainerSource
 metadata:
   name: test-heartbeats
@@ -172,7 +172,7 @@ kubectl delete namespace containersource-example
 
 ## Reference Documentation
 
-See the [ContainerSource specification](../../reference/eventing/#sources.knative.dev/v1beta1.ContainerSource).
+See the [ContainerSource specification](../../reference/api/eventing/#sources.knative.dev/v1.ContainerSource).
 
 ## Contact
 

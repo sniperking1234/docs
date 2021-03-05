@@ -14,7 +14,7 @@ creating your own event source as a ContainerSource.
 ### Prepare the heartbeats image
 
 Knative [event-sources](https://github.com/knative/eventing-contrib) has a
-sample of heartbeats event source. You could clone the source codes by
+sample of heartbeats event source. You could clone the source code by
 
 ```
 git clone -b "{{< branch >}}" https://github.com/knative/eventing-contrib.git
@@ -62,7 +62,7 @@ The status of the created service can be seen using:
 kubectl get ksvc
 
 NAME            URL                                           LATESTCREATED         LATESTREADY           READY   REASON
-event-display   http://event-display.default.1.2.3.4.xip.io   event-display-gqjbw   event-display-gqjbw   True    
+event-display   http://event-display.default.1.2.3.4.xip.io   event-display-gqjbw   event-display-gqjbw   True
 ```
 
 ### Create a ContainerSource using the heartbeats image
@@ -75,7 +75,7 @@ file. Note that arguments and environment variables are set and will be passed
 to the container.
 
 ```yaml
-apiVersion: sources.knative.dev/v1beta1
+apiVersion: sources.knative.dev/v1
 kind: ContainerSource
 metadata:
   name: test-heartbeats
